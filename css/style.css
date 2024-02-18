@@ -1,0 +1,53 @@
+/* ==================== root ==================== */
+:root {
+  --main-color: #007bff;
+  --potin-color: #ff8a00;
+  --primary-font-color: #1a1a1a;
+  --white: #ffffff;
+
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  --info-color: #17a2b8;
+}
+/* ==================== * ==================== */
+/* ==================== wrap ==================== */
+/* ==================== container ==================== */
+/* ==================== section ==================== */
+.section {
+  padding: 0 210px;
+  /* text-align: center; */
+}
+/* ==================== intro ==================== */
+.intro {
+  color: #fff;
+  height: 100vh;
+}
+.introSub {
+  padding-top: 300px;
+}
+.intro .subtitle {
+  text-align: left;
+  font-size: 2.5rem;
+  /* margin-top: 400px; */
+}
+
+.intro .subtitle span {
+  font-weight: 600;
+}
+
+.intro .introTitle {
+  text-align: left;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 10rem;
+  text-transform: uppercase;
+  font-family: "Lora", serif;
+}
+/* ==================== profile ==================== */
+/* ==================== devWork ==================== */
+/* ==================== devPrac ==================== */
+/* ==================== designWork ==================== */
+/* ==================== contact ==================== */
