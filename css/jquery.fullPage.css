@@ -100,7 +100,7 @@ html.fp-enabled,
   margin-top: -32px;
   top: 50%;
   opacity: 1;
-  -webkit-transform: translate3d(0, 0, 0);
+  /* -webkit-transform: translate3d(0, 0, 0); */
 }
 #fp-nav.right {
   right: 17px;
@@ -159,18 +159,29 @@ html.fp-enabled,
   width: 12px;
   margin: -6px 0 0 -6px;
   border-radius: 100%;
-  background: #ff8a00;
+  /* background: #007bff; */
+  background: url(../img/r_menu_star.png);
+  background-size: 100%;
+  animation: r_menu 3s linear infinite;
+}
+@keyframes r_menu {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
   border-radius: 50%;
   position: absolute;
   z-index: 1;
-  height: 4px;
-  width: 4px;
+  height: 2px;
+  width: 2px;
   border: 0;
   background: #fff;
-  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.2); */
   left: 50%;
   top: 50%;
   margin: -2px 0 0 -2px;

@@ -11,6 +11,16 @@
     <script src="./js/jquery.fullPage.js"></script>
     <script src="./js/main.js"></script>
 
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <!-- style -->
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
@@ -29,49 +39,212 @@
       href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
       rel="stylesheet"
     />
+
   </head>
   <body>
     <div class="wrap">
       <div class="container">
         <div class="fullpage">
+          <!--  intro  -->
           <div class="section intro">
             <div class="introSub">
               <div class="subtitle">
-                <span>진취적으로 성장</span>하는 <br />
-                웹디자이너 <span>정서윤</span> 입니다
+                <!-- <span>진취적으로 성장</span>하는 <br />
+                웹디자이너 <span>정서윤</span> 입니다 -->
+                Web publisher & Designer
               </div>
-              <div class="introTitle">portfolio</div>
+              <div class="introTitle">Portfolio</div>
+
+              <div class="scroll">
+                <p>scroll down</p>
+                <div class="mouse">
+                    <span class="wheel"></span>
+                </div>
+            </div>
             </div>
           </div>
+          <!-- //intro -->
+
+          <!-- profile  -->
           <div class="section profile">
             <div class="profileSub">
-              <div class="subtitle">
-                사용자에게 편리한 웹 디자인을 제공하는 웹디자이너 정서윤 입니다.
+              <div class="profileCont">
+                <div class="contLeft">
+                  <div class="imgDiv">
+                    <img src="./img/emojiFace.PNG" alt="프로필캐릭터" />
+                  </div>
+                  <div class="subtitle">
+                    <span>사용자에게 편리한 웹 디자인</span>을 제공하는<br />
+                    <span>신입 웹디자이너 정서윤</span> 입니다.
+                  </div>
+                </div>
+                <div class="contRight">
+                  <div class="contRightLeft">
+                    <div class="container">
+                      <div class="subtitle">About</div>
+                      정서윤 <br />
+                      1995. 03. 22 <br />
+                      010 - 6533 - 1406<br />
+                      tkddnjs1406@icloud.com<br />
+                      <div class="github">
+                      <a href="https://github.com/yoonhappy2" target="_blank">
+                        <img src="./img/github.png" alt="">
+                        Github</a><br />
+                    </div>
+                    </div>
+                    <div class="container">
+                      <div class="subtitle">Education</div>
+                      <div class="sbdiv">
+                        <div class="day">2023.01</div>
+                        기업연계형 프론트엔드 실무 프로젝트 과정 2기 수료<br />
+                      </div>
+                      <div class="sbdiv">
+                        <div class="day">2022.10</div>
+                        자바(JAVA)기반 클라우드 융합 개발자 양성과정<br />
+                      </div>
+                      <div class="sbdiv">
+                        <div class="day">2019.02</div>
+                        상명대학교 시각디자인학과 졸업<br />
+                      </div>
+                      <div class="sbdiv">
+                        <div class="day">2014.02</div>
+                        통진고등학교 졸업<br />
+                      </div>
+                    </div>
+                    <div class="container toolsImg">
+                      <div class="subtitle">Tools</div>
+                      <img src="./img/Photoshop.png" alt="" />
+                      <img src="./img/Illustrator.png" alt="" />
+                      <img src="./img/Figma.png" alt="" />
+                      <img src="./img/html5.png" alt="" />
+                      <img src="./img/css3.png" alt="" />
+                      <img src="./img/js (1).png" alt="" />
+                      <img src="./img//git.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="contRightRight">
+                    <div class="container">
+                      <div class="subtitle">Certificate</div>
+                      <div class="sbdiv">
+                        <div class="day">2022.07</div>
+                        컴퓨터그래픽스운용기능사 취득<br />
+                      </div>
+                      <div class="sbdiv">
+                        <div class="day">2021.02</div>
+                        GTQ 1급 취득<br />
+                      </div>
+                      <div class="sbdiv">
+                        <div class="day">2021.02</div>
+                        운전면허2종 <br />
+                      </div>
+                      <div class="sbdiv">
+                        <div class="day">2021.02</div>
+                        웹디자인기능사 필기 취득 <span>실기 접수</span><br />
+                      </div>
+                    </div>
+                    <div class="container">
+                      <div class="subtitle">Experience</div>
+                      <div class="sbdiv">
+                        <div class="day">2023.02 - 2023.05</div>
+                        (주)이지서티 프론트엔드 개발자 인턴근무<br />
+                      </div>
+                      <div class="sbdiv">
+                        <div class="day">2020.08 ~ 2022.04</div>
+                        경기신용보증재단 보증업무 담당 주임근무<br />
+                      </div>
+                      <div class="sbdiv">
+                        <div class="day">2019.08 ~ 2020.03</div>
+                        경기신용보증재단 사무보조 아르바이트 근무<br />
+                      </div>
+                      <div class="sbdiv">
+                        <div class="day">2018.11 ~ 2019.06</div>
+                        디자인나무 편집디자이너 근무 <br />
+                      </div>
+                      <div class="sbdiv">
+                        <div class="day">2016.03 ~ 2016.12</div>
+                        상명대학교 시각디자인과 학생회 <br />
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
+        </div>
+        <!-- //profile -->
+
+        <!-- devwork 개발 작업물 -->
+        <div class="section devWork">
+          <div class="swiper" id="web_wrap">
+            <!-- .swiper-wrapper 슬라이드 한장 한장을 묶어주는 슬라이드 영역 틀 -->
+                <div class="swiper-wrapper">
+                    <!-- .swiper-slide 슬라이드 개별 한장 부모 -->
+                    <div class="swiper-slide web1">
+                      <div style="background: red; width: 100%; height: 80vh;"></div>
+                    </div>
+                    <div class="swiper-slide web2">
+                      <div style="background: orange; width: 100%; height: 80vh;"></div>
+                    </div>
+                    <div class="swiper-slide web3">
+                      <div style="background: yellow; width: 100%; height: 80vh;"></div>
+                    </div>
+                    <div class="swiper-slide web4">
+                      <div style="background: green; width: 100%; height: 80vh;"></div>
+                    </div>
+                </div>
+                <!-- 슬라이드 이전, 다음 버튼 -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+        </div>
+</div>
+        <!-- // devwork 개발 작업물 -->
+
+        <!-- devprac 개발 연습 -->
+        <div class="section devPrac">
+          <div class="DPtitle">
+            <h2>developer practice</h2>
           </div>
-          <div class="section devWork">
-            <div>개발 작업물</div>
+          <div class="DPcontainer">
+            <div class="DPCard">
+            <a href="./webStandardCloneCording/index.html" target="_blank"
+              >웹표준준수 클론코딩 사이트
+            </a>
           </div>
-          <div class="section devPrac">
-            <div>
-              <a href="./webStandardCloneCording/index.html"
-                >웹표준준수 클론코딩 사이트
-              </a>
-              <hr />
-              <a href="./responsive/layoutPrac/layoutPrac.html">
-                반응형 클론코딩
-              </a>
-            </div>
+          <div class="DPCard">
+            <a href="./responsive/layoutPrac/layoutPrac.html" target="_blank">
+              반응형 클론코딩
+            </a>
           </div>
-          <div class="section designWork">
-            <div>디자인 작업물</div>
-          </div>
-          <div class="section contact">
-            <div>콘택트</div>
+          <div class="DPCard"></div>
+          <div class="DPCard"></div>
           </div>
         </div>
+        <!-- //devprac 개발 연습 -->
+
+        <!-- designwork 디자인 작업물 -->
+        <div class="section designWork">
+          <div>디자인 작업물</div>
+        </div>
+        <!-- //designwork 디자인 작업물 -->
+
+        <!-- contact -->
+        <div class="section contact">
+          <div>콘택트</div>
+        </div>
+        <!-- //contact -->
       </div>
     </div>
+<script>
+          const web_wrap = new Swiper('#web_wrap',{
+            autoplay:{delay:10000}, // 자동재생
+            disableOnInteraction:false,// 버튼 클릭 후 자동재생유지}, 
+            loop:true, // 한 방향으로 반복 ( 기본값은 false )
+            direction:'horizontal', // 수직방향( 기본값은 horizontal )
+            navigation: {
+                    // 슬라이드 버튼 작동하게 하는 속성:값
+                    // ( 개별인식가능한 부모명 꼭 작성하기! ) ★★
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',} 
+            });
+</script>
   </body>
 </html>

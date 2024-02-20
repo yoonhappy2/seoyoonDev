@@ -3,6 +3,8 @@
   --main-color: #007bff;
   --potin-color: #ff8a00;
   --primary-font-color: #1a1a1a;
+  --secondary-font-color: #6c757d;
+  --light-font-color: #c4c4c4;
   --white: #ffffff;
 
   --primary-color: #007bff;
@@ -11,6 +13,47 @@
   --danger-color: #dc3545;
   --warning-color: #ffc107;
   --info-color: #17a2b8;
+}
+/* ==================== swiper ==================== */
+/* //.swiper-container 설정  */
+.swiper-container {
+  width: 80%;
+  /* height: 100vh; */
+}
+/* //.swiper-slide 설정  */
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+/* //swiper.css에서 수정을 해야 되지만 cdn으로 불러와서 여기서 중복 설정 + !important로 제어 하였음 */
+.swiper-container-vertical > .swiper-pagination-bullets {
+  top: unset !important;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+}
+/* //swiper.css에서 수정을 해야 되지만 cdn으로 불러와서 여기서 중복 설정 + !important로 제어 하였음 */
+.swiper-container-vertical
+  > .swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  display: inline-block !important;
+  margin: 6px 2px !important;
 }
 /* ==================== * ==================== */
 /* ==================== wrap ==================== */
@@ -26,7 +69,7 @@
   height: 100vh;
 }
 .introSub {
-  padding-top: 300px;
+  padding-top: 400px;
 }
 .intro .subtitle {
   text-align: left;
@@ -40,14 +83,178 @@
 
 .intro .introTitle {
   text-align: left;
+  margin: -50px 0 0 0;
   font-weight: 700;
-  font-style: italic;
+  /* font-style: italic; */
   font-size: 10rem;
-  text-transform: uppercase;
-  font-family: "Lora", serif;
+  /* text-transform: uppercase; */
+  /* font-family: "Lora", serif; */
+}
+
+.introSub .scroll {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+.introSub .scroll p {
+  color: #fff;
+  margin-bottom: 6px;
+}
+.introSub .mouse {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 50px;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+}
+.introSub .scroll .wheel {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 12px;
+  border-radius: 50px;
+  background: #fff;
+  margin-top: 7px;
+  animation: wheel 0.8s alternate infinite;
+}
+/* 마우스휠 애니메이션 */
+@keyframes wheel {
+  0% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(3px);
+  }
 }
 /* ==================== profile ==================== */
+.profile .container {
+  height: 250px;
+  margin-bottom: 20px;
+}
+.profile .container:last-child {
+  height: 100px;
+}
+.profileCont {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+
+.contRight {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+.imgDiv {
+  background: var(--main-color);
+  /* background-color: rgba(0, 26, 255, 0.5);  */
+  /* 흰색 배경에 50% 투명도 적용 */
+  width: 300px;
+  height: 300px;
+  border-radius: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  animation: app 0.8s ease-in-out infinite alternate;
+}
+
+@keyframes app {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+.imgDiv img {
+  width: 50%;
+}
+
+.contLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profileCont .contRight .subtitle {
+  color: var(--main-color);
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.profileCont .contLeft .subtitle {
+  text-align: center;
+  font-size: 1.5rem;
+}
+.profileCont .subtitle span {
+  background-color: var(--main-color);
+  color: var(--white);
+}
+
+.profileCont .day {
+  color: var(--secondary-font-color);
+  font-size: 0.8rem;
+}
+
+.contRight .sbdiv {
+  margin-bottom: 6px;
+}
+
+.toolsImg img {
+  margin-right: 5px;
+  size: 5%;
+}
+
+.sbdiv span {
+  color: var(--light-font-color);
+}
+
+.github img {
+  width: 15px;
+}
+
+.contRightLeft,
+.contRightRight,
+.contLeft {
+  margin: 0 10px;
+}
+
 /* ==================== devWork ==================== */
 /* ==================== devPrac ==================== */
+.DPcontainer {
+  display: flex;
+}
+.DPCard {
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  border: 1px solid var(--light-font-color);
+  border-radius: 20px;
+  filter: grayscale(100%);
+  transition: all 0.5s linear;
+  /* image-rendering: ; */
+}
+
+.DPCard a {
+  display: block;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  line-height: 300px;
+}
+.DPCard:hover {
+  filter: none;
+}
 /* ==================== designWork ==================== */
 /* ==================== contact ==================== */
