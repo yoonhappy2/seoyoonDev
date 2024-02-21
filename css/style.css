@@ -1,11 +1,12 @@
 /* ==================== root ==================== */
 :root {
   --main-color: #007bff;
+  --main-gl-color: rgba(0, 119, 255, 0.4);
   --potin-color: #ff8a00;
   --primary-font-color: #1a1a1a;
   --secondary-font-color: #6c757d;
   --light-font-color: #c4c4c4;
-  --white: #ffffff;
+  --white: #fff;
 
   --primary-color: #007bff;
   --secondary-color: #6c757d;
@@ -102,7 +103,7 @@
 }
 .introSub .scroll p {
   color: #fff;
-  margin-bottom: 6px;
+  margin-top: 6px;
 }
 .introSub .mouse {
   content: "";
@@ -231,7 +232,162 @@
 }
 
 /* ==================== devWork ==================== */
+.DWslide {
+  width: 100%;
+  /* margin-right: 200px; */
+  background: transparent;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.DWslide .left {
+  width: 50%;
+  margin-right: 50px;
+}
+
+.DWslide img {
+  border: 1px solid var(--light-font-color);
+  width: 100%; /* 부모 요소의 너비에 맞추어 이미지 크기 조절 */
+  height: auto; /* 세로 비율 유지 */
+  border-radius: 10px;
+}
+.DWslide .right {
+  width: 30%;
+  height: 360px;
+  text-align: left;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.DWslide .right .txt {
+  width: 100%;
+}
+
+.DWslide > .right > .txt > .subtitle {
+  font-size: 1.2rem;
+  color: var(--primary-font-color);
+  margin: 10px 0 0 5px;
+}
+
+.DWslide .right .txt h3 {
+  font-size: 3rem;
+}
+
+.DWbtndiv a {
+  display: flex;
+}
+
+.DWbtndiv a svg {
+  width: 15px;
+}
+
+.DWbtndiv a svg {
+  margin-right: 10px;
+}
+
+.DWbtndiv {
+  padding-bottom: 5px;
+  position: relative;
+  border-bottom: 1px solid transparent;
+}
+
+/* 애니메이션 효과 */
+.DWbtndiv::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--main-color);
+  /* 선의 색상 */
+  transition: width 0.3s ease-in-out; /* 애니메이션 지속 시간 및 이징 함수 */
+}
+
+/* hover 시 애니메이션 활성화 */
+.DWbtndiv:hover::after {
+  width: 100%;
+  color: var(--main-color);
+}
+
+.desc {
+  width: 80%;
+}
+
+.workListItem {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2.4rem;
+  gap: 0.8rem;
+}
+
+.workListTag {
+  padding: 6px 10px;
+  color: var(--main-color);
+  /* font-size: 1.4rem; */
+  border: 1.5px solid var(--main-gl-color);
+  border-radius: 10rem;
+  background: transparent;
+}
+/* ------ 스와이퍼 버튼 변경 ------ */
+.swiper-button-prev,
+.swiper-button-next {
+  /* background-color: #fff; */
+  opacity: 0.5;
+  padding: 15px 5px;
+  border-radius: 20px;
+  color: black !important;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  opacity: 1;
+  color: var(--main-color) !important;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+}
+/* 애니메이션 키 프레임 정의 */
+@keyframes moveLeftRight {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-10px); /* 왼쪽으로 이동할 거리를 조절 */
+  }
+  100% {
+    transform: translateX(10px); /* 오른쪽으로 이동할 거리를 조절 */
+  }
+}
+
+/* swiper-button-prev 버튼에 애니메이션 적용 */
+.swiper-button-prev {
+  animation: moveLeftRight 2s ease-in-out 0s infinite alternate;
+}
+
+/* swiper-button-next 버튼에 애니메이션 적용 */
+.swiper-button-next {
+  animation: moveLeftRight 2s ease-in-out 0s infinite alternate;
+}
+
 /* ==================== devPrac ==================== */
+.DPtitle {
+  margin-bottom: 10px;
+}
+.DPtitle h2 {
+  color: var(--main-color);
+  font-size: 3rem;
+  font-weight: 700;
+}
 .DPcontainer {
   display: flex;
 }
@@ -244,17 +400,33 @@
   filter: grayscale(100%);
   transition: all 0.5s linear;
   /* image-rendering: ; */
+  overflow: hidden;
 }
 
 .DPCard a {
   display: block;
   width: 300px;
   height: 300px;
+  color: var(--white);
+}
+
+.DPCard:hover {
+  filter: none;
+  /* background-color: rgba(185, 239, 255, 0.5); */
+  background-color: var(--main-color);
+}
+
+.DPCard .hidden_text {
+  opacity: 0;
+  transition: opacity 0.3s ease;
   text-align: center;
   line-height: 300px;
 }
-.DPCard:hover {
-  filter: none;
+
+.DPCard:hover .hidden_text {
+  opacity: 1;
+  color: var(--white);
 }
+
 /* ==================== designWork ==================== */
 /* ==================== contact ==================== */

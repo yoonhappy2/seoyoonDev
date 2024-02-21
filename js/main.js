@@ -1,13 +1,4 @@
-// $(function() {
-
-//     $('#fullpage').fullpage({
-//         //option here
-//         autoScrolling:true,
-//         xcrollHorizontally: true
-//     });
-// });
-
-
+// fullpage 제이쿼리 
 $(function () {
     var page = $(".fullpage").fullpage({
       // 1. 네비게이션 보이기
@@ -20,10 +11,9 @@ $(function () {
       sectionsColor: ["#007bff","#fff"],
       // sectionsColor: ["#fff", "yellow", "#efefef"],
 
-      scrollingSpeed: 500,
+      scrollingSpeed: 800,
       
       // 내용이 넘칠 경우 그 섹션만 자동으로 스크롤이 생김
       scrollOverflow: true, 
     });
   });
-
