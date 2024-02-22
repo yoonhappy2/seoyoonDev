@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*   팝업 임시 버튼 스타일  */
+      .btn-box .btn-open {
+        display: block;
+        width: 200px;
+        height: 50px;
+        margin: 80px auto 0;
+        line-height: 50px;
+        background: #333;
+        text-align: center;
+      }
+
+      .btn-box .btn-open span {
+        color: #fff;
+      }
+
+      /* 팝업 스타일 */
+      .modal-bg {
+        display: none;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 999;
+      }
+      .modal-wrap {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px;
+        height: 300px;
+        background: #fff;
+        z-index: 1000;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <svg
+    width="64"
+    height="64"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    role="img"
+  >
+    <path
+      d="M40 48 24 32l16-16"
+      stroke="#000"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    ></path>
+  </svg>
+
+  <div>
+    <a href="#lay_pop">
+      <img src="./img/airquant.png" alt="" / style="width: 300px;"></a
+    >
+    <div id="lay_pop">
+      <img src="./img/css3.png" />
+      <a
+        href="javascript:;"
+        onClick="document.getElementById('lay_pop').style.display = 'none';"
+        ><img src="./img/emojiFace.PNG"
+      /></a>
+    </div>
+  </div> -->
+
+    <!-- 클릭할 이미지 리스트 -->
+    <!-- <div class="imgList">
+      <div class="imgC">
+        <img src="./img/css3.png" alt="모달할 이미지" />
+        <p>이미지 1</p>
+      </div>
+      <div class="imgC">
+        <img src="./img/css3.png" alt="모달할 이미지" />
+        <p>이미지 2</p>
+      </div>
+      <div class="imgC">
+        <img src="./img/css3.png" alt="모달할 이미지" />
+        <p>이미지 3</p>
+      </div>
+    </div> -->
+
+    <!-- 팝업 될 곳 -->
+    <!-- <div class="modal">
+      <button>&times;</button>
+      <div class="modalBox">
+        <img src="./img/Figma.png" alt="" />
+        <p></p>
+      </div>
+    </div> -->
+
+    <!-- -------------------------------------------------------- -->
+    <!-- 전체 레이아웃 -->
+    <div id="wrap">
+      <!-- Content -->
+      <section class="content">
+        <div class="container">
+          <!-- 팝업용 임시 버튼입니다. -->
+          <div class="btn-box">
+            <a href="#" class="btn-open" onClick="javascript:popOpen();">
+              <span>열기</span>
+            </a>
+          </div>
+          <!-- //팝업용 임시 버튼입니다. -->
+        </div>
+      </section>
+      <!-- //Content -->
+    </div>
+    <!-- //전체 레이아웃 -->
+
+    <!-- modal 영역 -->
+    <div class="modal-bg" onClick="javascript:popClose();"></div>
+    <div class="modal-wrap">
+      modal sample
+      <button class="modal-close" onClick="javascript:popClose();">닫기</button>
+    </div>
+
+    <script>
+      $(".btn-open").each(function () {
+        var modalID = $(this).attr("href");
+        var modalBg = $(".modal-bg");
+
+        $(this).on("click", function (e) {
+          e.preventDefault();
+
+          modalBg.fadeIn();
+
+          $(modalID).show();
+
+          $("html").css({ overflow: "hidden" });
+        });
+
+        $(".modal-bg, .modal-close").on("click", function () {
+          modalBg.fadeOut();
+          $(modalID).hide();
+          $(modalID).removeAttr("style");
+
+          $("html").removeAttr("style");
+        });
+      });
+    </script>
+    <!-- //modal 영역 -->
+    <!-- -------------------------------------------------------- -->
+
+    <!-- <script>
+      $(function () {
+        // 	이미지 클릭시 해당 이미지 모달
+        $(".imgC").click(function () {
+          $(".modal").show();
+          // 해당 이미지 가겨오기
+          var imgSrc = $(this).children("img").attr("src");
+          var imgAlt = $(this).children("img").attr("alt");
+          $(".modalBox img").attr("src", imgSrc);
+          $(".modalBox img").attr("alt", imgAlt);
+
+          // 해당 이미지 텍스트 가져오기
+          var imgTit = $(this).children("p").text();
+          $(".modalBox p").text(imgTit);
+
+          // 해당 이미지에 alt값을 가져와 제목으로
+          //$(".modalBox p").text(imgAlt);
+        });
+
+        //.modal안에 button을 클릭하면 .modal닫기
+        $(".modal button").click(function () {
+          $(".modal").hide();
+        });
+
+        //.modal밖에 클릭시 닫힘
+        $(".modal").click(function (e) {
+          if (e.target.className != "modal") {
+            return false;
+          } else {
+            $(".modal").hide();
+          }
+        });
+      });
+    </script> -->
+  </body>
+</html>

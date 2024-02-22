@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () { // 웹문서 로딩 완료 후  
+            $("p").hide(); // <p> 요소를 일단 먼저 숨긴 후
+            $("button").click(function () { // <button> 요소 클릭하면
+                $("p").toggle(); // <p> 요소를 보이기/숨기기 상호 전환시켜라.
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <button>보이기/숨기기</button>
+
+    <p>홈짱닷컴 (Homzzang.com)</p>
+    <p>HTML CSS JAVASCRIPT JQUERY SQL PHP</p>
+
+</body>
+
+</html>

@@ -9,7 +9,6 @@
     <script src="./js/jquery-3.6.0.min.js"></script>
     <!-- jQuery 스크립트 먼저 삽입 -->
     <script src="./js/jquery.fullPage.js"></script>
-    <script src="./js/main.js"></script>
 
     <!-- swiper -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
@@ -201,7 +200,7 @@
                             </div>
                         </div>
                         <div class="DWbtndiv">
-                          <a href="" class="DWbtn">
+                          <a href="https://main.d2tfxbeyfu5as6.amplifyapp.com" target="_blank" class="DWbtn">
                             <svg class="CustomLink-module--icon--edbbc" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
                               <circle cx="9" cy="9" r="9" fill="currentColor"></circle>
                               <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8 6 3 3-3 3"></path>
@@ -210,7 +209,6 @@
                           </a>
                         </div>
                         </div>
-
                       </div>
                     </div>
                     <!-- // 슬라이드 1  -->
@@ -248,24 +246,25 @@
                     <!-- //슬라이드 2 -->
 
                     <!-- 슬라이드 3 -->
-                    <!-- <div class="swiper-slide web3">
+                    <div class="swiper-slide web3">
                       <div class="DWslide">
                         <div class="left">
-                          <img src="/img/taranUXD.png" alt="">
+                          <img src="/img/gym.png" alt="">
                         </div>
                         <div class="right">
                           <div class="txt">
-                            <h3>타란UXD</h3>
-                            <div>홈페이지 리뉴얼</div>
+                            <h3>GYM</h3>
+                            <div>사이드 프로젝트 </div>
                             <div class="desc">
                               <ul class="workListItem">
-                                <li class="workListTag">#디자인참여</li>
-                                <li class="workListTag">#퍼블리싱참여</li>
+                                <li class="workListTag">#디자인100%</li>
+                                <li class="workListTag">#퍼블리싱100%</li>
+                                <li class="workListTag">#bootstrap</li>
                               </ul>
                             </div>
                         </div>
                         <div class="DWbtndiv">
-                          <a href="" class="DWbtn">
+                          <a href="./SYgym/main.html" target="_blank" class="DWbtn">
                             <svg class="CustomLink-module--icon--edbbc" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
                               <circle cx="9" cy="9" r="9" fill="currentColor"></circle>
                               <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8 6 3 3-3 3"></path>
@@ -276,7 +275,7 @@
                         </div>
 
                       </div>
-                    </div> -->
+                    </div>
                     <!-- // 슬라이드 3 -->
                 </div>
                 <!-- 슬라이드 이전, 다음 버튼 -->
@@ -293,7 +292,7 @@
           </div>
           <div class="DPcontainer">
             <div class="DPCard">
-            <a  href="./webStandardCloneCording/index.html"
+            <a  href="./webStandardCloneCording/index.html"  target="_blank"
               > <div class="hidden_text">웹표준준수 클론코딩 사이트</div> 
             </a>
           </div>
@@ -314,32 +313,58 @@
 
         <!-- designwork 디자인 작업물 -->
         <div class="section designWork">
-          <div>디자인 작업물</div>
+          <div class="DPtitle">
+            <h2>Design Work</h2>
+          </div>
+          <div class="container">
+            <div class="contents sns">
+                <div class="image">
+                    <a href="#">
+                      <img 
+                      id="myImg"
+                      src="./img/49573.png"
+                      alt="Image"
+                      onclick="openModal(this.src)"/>
+                    </a>
+
+                    <a href="#">
+                      <img 
+                      id="myImg"
+                      src="./img//imgView.do.jpeg"
+                      alt="Image"
+                      onclick="openModal(this.src)"/>
+                    </a>
+                </div>
+                <div id="myModal" class="modal">
+                  <div class="modal-content">
+                    <span class="close" onclick="closeModal()">
+                      <!-- &times; -->
+                      <img src="./img/close.png" alt="닫기"></span>
+                    <img id="modalImg" style="width: 100%" />
+                  </div>
+                </div>
+            </div>
+        </div>
         </div>
         <!-- //designwork 디자인 작업물 -->
 
         <!-- contact -->
-        <div class="section contact">
+        <!-- <div class="section contact">
           <div>콘택트</div>
-        </div>
+        </div> -->
         <!-- //contact -->
       </div>
     </div>
 
-<script>
-  // 스와이퍼 스크립트
-          const web_wrap = new Swiper('#web_wrap',{
-            // autoplay:{delay:10000}, 
-            // 자동재생
-            disableOnInteraction:false,// 버튼 클릭 후 자동재생유지}, 
-            loop:true, // 한 방향으로 반복 ( 기본값은 false )
-            direction:'horizontal', // 수직방향( 기본값은 horizontal )
-            navigation: {
-                    // 슬라이드 버튼 작동하게 하는 속성:값
-                    // ( 개별인식가능한 부모명 꼭 작성하기! ) ★★
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',} 
-            });
-</script>
+    <script src="./js/index.js"></script>
+    <script src="./js/scroll.js"></script>
+    <!-- 확인하고 삭제할것  -->
+    <script>
+// let check = document.getElementsByClassName("DWbtndiv")[0].scrollTop;
+// console.log(check);
+// var scrollPosition = window.scrollY || document.documentElement.scrollTop;
+// console.log(scrollPosition);
+    </script>
+    <!-- //확인하고 삭제할것  -->
   </body>
 </html>

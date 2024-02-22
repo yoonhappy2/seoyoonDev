@@ -1,0 +1,36 @@
+table {
+    border: none;
+    text-align: center;
+    border-top: 3px solid rgb(78, 78, 78);
+    border-bottom: 3px solid rgb(78, 78, 78);
+    border-collapse:collapse;
+    color: rgb(74, 74, 74);
+}
+
+table thead {
+    background-color: pink;
+    height: 70px;
+    border-bottom: 3px solid rgb(78, 78, 78);
+}
+
+.boardTbody td {
+    height: 30px;
+    background-color: rgb(230, 255, 255);
+    border-bottom: 1px solid black;
+}
+
+input {
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#save1 {
+    background-color: rgb(255, 160, 176);
+    border: none;
+    color: white;
+}
+
+#save {
+    color: rgb(74, 74, 74);
+}

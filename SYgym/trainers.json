@@ -1,0 +1,22 @@
+{
+    "gym": [
+        {
+        "id": 1,
+        "item": "PT",
+        "teacher": "옥주희",
+        "reservation": "예약가능"
+        },
+        {
+        "id": 2,
+        "item": "요가",
+        "teacher": "이태희",
+        "reservation": "예약가능"
+        },
+        {
+        "id": 3,
+        "item": "필라테스",
+        "teacher": "김세은",
+        "reservation": "예약가능"
+        }
+    ]
+}

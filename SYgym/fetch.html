@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./fetch.css">
+</head>
+
+<body onload="showBoard()">
+    <table width="700px" class="boardTable`">
+        <thead class="boardThead">
+            <tr class="boardThTr">
+                <th>순위</th>
+                <th>제목</th>
+                <th>저자</th>
+                <th>가격</th>
+            </tr>
+        </thead>
+        <tbody class="boardTbody">
+        </tbody>
+    </table>
+
+    <br>
+    <form id="save">
+        <h3>도서 추가</h3>
+        제목 : <input type="text" name="title"><br>
+        저자 : <input type="text" name="publisher"><br>
+        가격 : <input type="text" name="price">
+        <input type="submit" value="저장" id="save1">
+    </form>
+    <script src="fetch.js"></script>
+</body>
+
+</html>

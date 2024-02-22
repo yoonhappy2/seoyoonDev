@@ -1,0 +1,40 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "HTML+CSS+자바스크립트",
+      "publisher": "이지스퍼블리싱",
+      "price": "30,000"
+    },
+    {
+      "id": 2,
+      "title": "리액트 프로그래밍 정석",
+      "publisher": "정수아",
+      "price": "36,000"
+    },
+    {
+      "id": 3,
+      "title": "자바스크립트 프로그래밍 정석",
+      "publisher": "이지스퍼블리싱",
+      "price": "20,000"
+    },
+    {
+      "id": 4,
+      "title": "HTML+CSS 프로그래밍 기초 배우기",
+      "publisher": "정재은",
+      "price": "60,000"
+    },
+    {
+      "id": 5,
+      "title": "자라나라 머리머리",
+      "publisher": "최나은",
+      "price": "100,000"
+    },
+    {
+      "title": "자바의 신",
+      "publisher": "정수아",
+      "price": "100,000,000",
+      "id": 6
+    }
+  ]
+}
