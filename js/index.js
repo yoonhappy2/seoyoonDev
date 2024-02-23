@@ -15,7 +15,7 @@ $(function () {
       
       // 내용이 넘칠 경우 그 섹션만 자동으로 스크롤이 생김
       // 사용하려면 scrolloverflow.min.js << 파일 첨부 
-    //   scrollOverflow: true, 
+      scrollOverflow: true, 
     });
     $(window).on('scroll', function() {
         var scrollHeight = $(this).scrollTop();

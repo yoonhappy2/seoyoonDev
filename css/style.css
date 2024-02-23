@@ -57,12 +57,16 @@
   margin: 6px 2px !important;
 }
 /* ==================== * ==================== */
+
 /* ==================== wrap ==================== */
 /* ==================== container ==================== */
 /* ==================== section ==================== */
 .section {
-  padding: 0 210px;
+  /* padding: 0 150px; */
   /* text-align: center; */
+  width: 1200px;
+  margin: 0 auto;
+  overflow-y: auto;
 }
 /* ==================== intro ==================== */
 .intro {
@@ -86,7 +90,6 @@
   text-align: left;
   margin: -50px 0 0 0;
   font-weight: 700;
-  /* font-style: italic; */
   font-size: 10rem;
   /* text-transform: uppercase; */
   /* font-family: "Lora", serif; */
@@ -136,9 +139,10 @@
 }
 /* ==================== profile ==================== */
 .profile .container {
-  height: 250px;
+  /* height: 250px; */
   margin-bottom: 20px;
 }
+
 .profile .container:last-child {
   height: 100px;
 }
@@ -157,9 +161,9 @@
   background: var(--main-color);
   /* background-color: rgba(0, 26, 255, 0.5);  */
   /* 흰색 배경에 50% 투명도 적용 */
+  border-radius: 300px;
   width: 300px;
   height: 300px;
-  border-radius: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -231,6 +235,22 @@
   margin: 0 10px;
 }
 
+.PFbtn {
+  animation: app 0.8s ease-in-out infinite alternate;
+  margin-top: 80px;
+}
+.PFbtn a {
+  padding: 10px 15px;
+  border: 2px solid var(--main-color);
+  border-radius: 50px;
+  color: var(--main-color);
+}
+
+.PFbtn a:hover {
+  background-color: var(--main-color);
+  color: var(--white);
+}
+
 /* ==================== devWork ==================== */
 .DWslide {
   width: 100%;
@@ -243,11 +263,6 @@
   align-items: center;
 }
 
-.DWslide .left {
-  width: 50%;
-  margin-right: 50px;
-}
-
 .DWslide img {
   border: 1px solid var(--light-font-color);
   width: 100%; /* 부모 요소의 너비에 맞추어 이미지 크기 조절 */
@@ -255,8 +270,7 @@
   border-radius: 10px;
 }
 .DWslide .right {
-  width: 30%;
-  height: 360px;
+  /* height: 360px; */
   text-align: left;
   font-size: 14px;
   display: flex;
@@ -324,7 +338,7 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: 2.4rem;
-  gap: 0.8rem;
+  /* gap: 0.8rem; */
 }
 
 .workListTag {
@@ -383,6 +397,7 @@
 .DPtitle {
   margin-bottom: 10px;
 }
+
 .DPtitle h2 {
   color: var(--main-color);
   font-size: 3rem;
@@ -487,3 +502,162 @@
   transform: rotate(180deg);
 }
 /* ==================== contact ==================== */
+
+/* ==================== 미디어쿼리 ==================== */
+/* 데스크탑 */
+@media only screen and (min-width: 1200px) {
+  .introSub,
+  #web_wrap,
+  .DPwrap,
+  .DWwrap,
+  .CTwrap {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* 인트로 */
+  .intro .introTitle {
+    font-weight: 700;
+    font-size: 10rem;
+  }
+
+  /* 프로필 */
+  .profileSub {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  .PFbtn {
+    display: none;
+  }
+
+  /* devwork */
+  .DWslide .left {
+    width: 50%;
+    margin-right: 50px;
+  }
+
+  .DWslide .right {
+    width: 30%;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .workListItem {
+    gap: 0.8rem;
+  }
+}
+
+/* 태블릿 */
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .introSub,
+  .DPwrap,
+  .DWwrap,
+  .CTwrap {
+    width: 768px;
+    margin: 0 auto;
+  }
+
+  /* 인트로 */
+  .intro .introTitle {
+    font-size: 9rem;
+  }
+
+  /* 프로필 */
+  .profileSub {
+    margin: 0 50px;
+  }
+  .imgDiv {
+    background: var(--main-color);
+    /* background-color: rgba(0, 26, 255, 0.5);  */
+    /* 흰색 배경에 50% 투명도 적용 */
+    width: 300px;
+    height: 300px;
+    border-radius: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    animation: app 0.8s ease-in-out infinite alternate;
+  }
+  .profile .container {
+    height: 250px;
+  }
+  .PFbtn {
+    display: none;
+  }
+
+  /* devwork */
+  .DWslide .left {
+    width: 60%;
+    margin-right: 3%;
+  }
+  .DWslide .right {
+    width: 30%;
+  }
+  .workListItem {
+    gap: 0.4rem;
+  }
+}
+
+/* 모바일 */
+@media only screen and (max-width: 767px) {
+  #web_wrap,
+  .DPwrap,
+  .DWwrap,
+  .CTwrap {
+    /* min-width: 1200px; */
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+
+  .introSub {
+    padding-left: 20px;
+  }
+
+  /* 인트로 */
+  .intro .introTitle {
+    font-size: 5rem;
+    margin: -25px 0 0 0;
+  }
+  .intro .subtitle {
+    font-size: 1.5rem;
+  }
+
+  /* 프로필 */
+  .imgDiv {
+    width: 200px;
+    height: 200px;
+  }
+  .profileCont {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contRight {
+    display: none;
+  }
+
+  /* devwork */
+  .DWslide {
+    height: 100vh;
+    flex-direction: column;
+  }
+
+  .DWslide .left {
+    padding: 0 30px;
+  }
+  .DWslide .right {
+    width: 90%;
+  }
+
+  .DWbtndiv {
+    margin-top: 30px;
+  }
+  .workListItem {
+    gap: 0.3rem;
+  }
+}
