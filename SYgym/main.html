@@ -1,288 +1,385 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>seoyoon gym</title>
-    <script src="https://kit.fontawesome.com/e3e652ad13.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <script
+      src="https://kit.fontawesome.com/e3e652ad13.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+    />
     <!-- 부트스트랩 주소 CDN(Content Delivery Network) -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css" media="screen">
-    <link rel="stylesheet" href="./calendar.css" media="screen">
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" media="screen" />
+    <link rel="stylesheet" href="./calendar.css" media="screen" />
+  </head>
 
-<body>
+  <body>
     <!-------------------------- 전체 화면 -------------------------->
     <div class="allGym">
+      <!-------------------------- 메인화면 이미지 -------------------------->
+      <div id="mainVideo">
+        <video muted autoplay loop>
+          <source src="./img/mainvid2.mp4" type="video/mp4" />
+        </video>
+      </div>
 
-        <!-------------------------- 메인화면 이미지 -------------------------->
-        <div id="mainVideo">
-            <video muted autoplay loop>
-                <source src="./img/mainvid2.mp4" type="video/mp4">
-            </video>
-        </div>
+      <!-------------------------- 메뉴바 ---------------------------->
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid" id="header">
+          <a class="navbar-brand" href="#">gym</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          ></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="#"
+                  onClick="alert('준비중입니다.')"
+                  >ABOUT</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="#"
+                  onClick="alert('준비중입니다.')"
+                  >PROGRAM</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="#"
+                  onClick="alert('준비중입니다.')"
+                  >MEMBERSHIP</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="#"
+                  onClick="alert('준비중입니다.')"
+                  >COMMUNITY</a
+                >
+              </li>
+            </ul>
 
-        <!-------------------------- 메뉴바 ---------------------------->
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid" id="header">
-                <a class="navbar-brand" href="#">gym</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+            <div class="buttonMenu">
+              <form class="buttonMenuSub">
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                  onClick="alert('준비중입니다.')"
+                >
+                  상담신청
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#"
-                                onClick="alert('준비중입니다.')">ABOUT</a> </li>
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#"
-                                onClick="alert('준비중입니다.')">PROGRAM</a> </li>
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#"
-                                onClick="alert('준비중입니다.')">MEMBERSHIP</a>
-                        </li>
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#"
-                                onClick="alert('준비중입니다.')">COMMUNITY</a>
-                        </li>
-                    </ul>
-
-                    <div class="buttonMenu">
-                        <form class="buttonMenuSub">
-                            <button type="submit" class="btn btn-primary" onClick="alert('준비중입니다.')">상담신청</button>
-                            <button type="submit" id="buttonhihi" class="btn btn-primary"
-                                onClick="alert('준비중입니다.')">LOGIN</button>
-                        </form>
-                    </div>
-                </div>
+                <button
+                  type="submit"
+                  id="buttonhihi"
+                  class="btn btn-primary"
+                  onClick="alert('준비중입니다.')"
+                >
+                  LOGIN
+                </button>
+              </form>
             </div>
-        </nav>
+          </div>
+        </div>
+      </nav>
 
+      <!-------------------------- 중간 예약 페이지 -------------------------->
+      <div class="middleMenu">
+        <div class="middleFirst">
+          <form class="middeleForm">
+            <input type="date" name="userBirthday" />
 
+            <select name="Program" id="program">
+              <option value="1">PT</option>
+              <option value="2">GX</option>
+              <option value="3">YOGA</option>
+              <option value="4">PILATES</option>
+            </select>
 
+            <select name="Location">
+              <option value="1">신림점</option>
+              <option value="2">봉천점</option>
+              <option value="3">서울대입구점</option>
+              <option value="4">낙성대점</option>
+            </select>
 
-        <!-------------------------- 중간 예약 페이지 -------------------------->
-        <div class="middleMenu">
-            <div class="middleFirst">
-                <form class="middeleForm">
-                    <input type='date' name='userBirthday' />
-
-                    <select name="Program" id="program">
-                        <option value="1"> PT</option>
-                        <option value="2"> GX</option>
-                        <option value="3"> YOGA</option>
-                        <option value="4"> PILATES</option>
-                    </select>
-
-                    <select name="Location">
-                        <option value="1"> 신림점</option>
-                        <option value="2"> 봉천점</option>
-                        <option value="3"> 서울대입구점</option>
-                        <option value="4"> 낙성대점</option>
-                    </select>
-
-                    <button type="button" id="search" class="btn btn-dark">Search</button>
-                </form>
-            </div>
-
-
-
-            <!-------------------------- 토글영역 -------------------------->
-            <!-------------------------- 달력 -------------------------->
-            <div class="togleSection">
-                <div class="calendar">
-                    <div class="header">
-                        <button class="calendar_btn" onclick="prevCal();">&lt;</button>
-                        <div class="title"><span class="year"></span>&nbsp;<span class="month"></span></div>
-                        <button class="calendar_btn" onclick="nextCal();">&gt;</button>
-                    </div>
-
-                    <div class="day">
-                        <div>S</div>
-                        <div>M</div>
-                        <div>T</div>
-                        <div>W</div>
-                        <div>T</div>
-                        <div>F</div>
-                        <div>S</div>
-                    </div>
-
-                    <div class="dates" id="dates"></div>
-
-                </div>
-                <!-- <input type="text" id="period_1"> ~ <input type="text" id="period_2"> -->
-
-                <span id="inthis"></span>
-
-                <!-------------------------- 운동쌤 선택창 -------------------------->
-                <div class="cardEvery">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">이름</h5>
-                            <p class="card-text">For much of the past Summer and Fall, I spent a lot of time rebuilding
-                                the html code on which the site was built.
-                            </p>
-                            <a class="btn btn-primary reservation" onClick="alert('준비중입니다.')">예약하기</a>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">이름</h5>
-                            <p class="card-text">For much of the past Summer and Fall, I spent a lot of time rebuilding
-                                the html code on which the site was built.
-                            </p>
-                            <a class="btn btn-primary reservation" onClick="alert('준비중입니다.')">예약하기</a>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">이름</h5>
-                            <p class="card-text">For much of the past Summer and Fall, I spent a lot of time rebuilding
-                                the html code on which the site was built.
-                            </p>
-                            <a class="btn btn-primary reservation" onClick="alert('준비중입니다.')">예약하기</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <button type="button" id="search" class="btn btn-dark">
+              Search
+            </button>
+          </form>
         </div>
 
-        <!-------------------------- 트레이너 소개 -------------------------->
-        <div class="introTrainers">
-            <div class="textTrainers">
-                <p>Trainers</p>
+        <!-------------------------- 토글영역 -------------------------->
+        <!-------------------------- 달력 -------------------------->
+        <div class="togleSection">
+          <div class="calendar">
+            <div class="header">
+              <button class="calendar_btn" onclick="prevCal();">&lt;</button>
+              <div class="title">
+                <span class="year"></span>&nbsp;<span class="month"></span>
+              </div>
+              <button class="calendar_btn" onclick="nextCal();">&gt;</button>
             </div>
-            <div class="trainersEvery">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6" id="prooooo">
-                        <div class="card" style="width: 18rem;">
-                            <img src="./img/Trainers1.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <div class="card-icon">
-                                    <i class="fa-brands fa-facebook-f" onClick="alert('준비중입니다.')"></i>
-                                    <i class="fa-brands fa-instagram" onClick="alert('준비중입니다.')"></i>
-                                    <i class="fa-brands fa-twitter" onClick="alert('준비중입니다.')"></i>
-                                </div>
-                                <h5 class="card-title">옥주희 트레이너</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk
-                                    of the
-                                    card's
-                                    content.</p>
-                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="card" style="width: 18rem;">
-                            <img src="./img/Trainers2.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <div class="card-icon">
-                                    <i class="fa-brands fa-facebook-f" onClick="alert('준비중입니다.')"></i>
-                                    <i class="fa-brands fa-instagram" onClick="alert('준비중입니다.')"></i>
-                                    <i class="fa-brands fa-twitter" onClick="alert('준비중입니다.')"></i>
-                                </div>
-                                <h5 class="card-title">김세은 트레이너</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk
-                                    of the
-                                    card's
-                                    content.</p>
-                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="card" style="width: 18rem;">
-                            <img src="./img/Trainers3.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <div class="card-icon">
-                                    <i class="fa-brands fa-facebook-f" onClick="alert('준비중입니다.')"></i>
-                                    <i class="fa-brands fa-instagram" onClick="alert('준비중입니다.')"></i>
-                                    <i class="fa-brands fa-twitter" onClick="alert('준비중입니다.')"></i>
-                                </div>
-                                <h5 class="card-title">박은예 트레이너</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk
-                                    of the
-                                    card's
-                                    content.</p>
-                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="card" style="width: 18rem;">
-                            <img src="./img/Trainers4.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <div class="card-icon">
-                                    <i class="fa-brands fa-facebook-f" onClick="alert('준비중입니다.')"></i>
-                                    <i class="fa-brands fa-instagram" onClick="alert('준비중입니다.')"></i>
-                                    <i class="fa-brands fa-twitter" onClick="alert('준비중입니다.')"></i>
-                                </div>
-                                <h5 class="card-title">최나은 트레이너</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk
-                                    of the
-                                    card's
-                                    content.</p>
-                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+            <div class="day">
+              <div>S</div>
+              <div>M</div>
+              <div>T</div>
+              <div>W</div>
+              <div>T</div>
+              <div>F</div>
+              <div>S</div>
             </div>
+
+            <div class="dates" id="dates"></div>
+          </div>
+          <!-- <input type="text" id="period_1"> ~ <input type="text" id="period_2"> -->
+
+          <span id="inthis"></span>
+
+          <!-------------------------- 운동쌤 선택창 -------------------------->
+          <div class="cardEvery">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">이름</h5>
+                <p class="card-text">
+                  For much of the past Summer and Fall, I spent a lot of time
+                  rebuilding the html code on which the site was built.
+                </p>
+                <a
+                  class="btn btn-primary reservation"
+                  onClick="alert('준비중입니다.')"
+                  >예약하기</a
+                >
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">이름</h5>
+                <p class="card-text">
+                  For much of the past Summer and Fall, I spent a lot of time
+                  rebuilding the html code on which the site was built.
+                </p>
+                <a
+                  class="btn btn-primary reservation"
+                  onClick="alert('준비중입니다.')"
+                  >예약하기</a
+                >
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">이름</h5>
+                <p class="card-text">
+                  For much of the past Summer and Fall, I spent a lot of time
+                  rebuilding the html code on which the site was built.
+                </p>
+                <a
+                  class="btn btn-primary reservation"
+                  onClick="alert('준비중입니다.')"
+                  >예약하기</a
+                >
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
 
-        <!-------------------------- 헬스장 위치 지도 -------------------------->
-        <div class="mainMap">
-            <div class="healthMap">
-                <p>오시는 길</p>
-            </div>
-            <div id="map" style="width: 60%; height: 500px;"></div>
-            <div class="healthMapText">
-                <div class="healthAdress">
-                    <h3>주소</h3>
-                    <p>서울특별시 관악구 어쩌구 저쩌구</p>
-                    <hr>
-                </div>
-
-                <div class="healthTraffic">
-                    <h3 class="publicTraffic">대중교통</h3>
-                    <div class="healthPublic">
-                        <div class="healthBuring">
-                            <i class="fa-solid fa-bus"></i>
-                            <p class="healthP">버스</p>
-                            <p>
-                                <b>서울대입구역 정류장</b><br>
-                                지선 : 5511 / 5513 / 5515 <br><br>
-
-                                <b>서울대입구역 5번 출구</b> <br>
-                                지선 : 5413 / 5530 / 6515 <br>
-                                간선 : 9 / 461 / 506 / 651 / 643
-                            </p>
-                        </div>
-                        <div class="healthBuring">
-                            <i class="fa-solid fa-train-subway"></i>
-                            <p class="healthP">지하철</p>
-                            <p><b>서울대입구역 4번 출구</b>에서 15m<br>
-                                옐로우 or 라붐아울렛 13층 <br>
-                                자마이카 휘트니스 서울대 입구점</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+      <!-------------------------- 트레이너 소개 -------------------------->
+      <div class="introTrainers">
+        <div class="textTrainers">
+          <p>Trainers</p>
         </div>
+        <div class="trainersEvery">
+          <div class="row">
+            <div class="col-lg-3 col-md-6" id="prooooo">
+              <div class="card" style="width: 18rem">
+                <img src="./img/Trainers1.png" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <div class="card-icon">
+                    <i
+                      class="fa-brands fa-facebook-f"
+                      onClick="alert('준비중입니다.')"
+                    ></i>
+                    <i
+                      class="fa-brands fa-instagram"
+                      onClick="alert('준비중입니다.')"
+                    ></i>
+                    <i
+                      class="fa-brands fa-twitter"
+                      onClick="alert('준비중입니다.')"
+                    ></i>
+                  </div>
+                  <h5 class="card-title">옥주희 트레이너</h5>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="card" style="width: 18rem">
+                <img src="./img/Trainers2.png" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <div class="card-icon">
+                    <i
+                      class="fa-brands fa-facebook-f"
+                      onClick="alert('준비중입니다.')"
+                    ></i>
+                    <i
+                      class="fa-brands fa-instagram"
+                      onClick="alert('준비중입니다.')"
+                    ></i>
+                    <i
+                      class="fa-brands fa-twitter"
+                      onClick="alert('준비중입니다.')"
+                    ></i>
+                  </div>
+                  <h5 class="card-title">김세은 트레이너</h5>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="card" style="width: 18rem">
+                <img src="./img/Trainers3.png" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <div class="card-icon">
+                    <i
+                      class="fa-brands fa-facebook-f"
+                      onClick="alert('준비중입니다.')"
+                    ></i>
+                    <i
+                      class="fa-brands fa-instagram"
+                      onClick="alert('준비중입니다.')"
+                    ></i>
+                    <i
+                      class="fa-brands fa-twitter"
+                      onClick="alert('준비중입니다.')"
+                    ></i>
+                  </div>
+                  <h5 class="card-title">박은예 트레이너</h5>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="card" style="width: 18rem">
+                <img src="./img/Trainers4.png" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <div class="card-icon">
+                    <i
+                      class="fa-brands fa-facebook-f"
+                      onClick="alert('준비중입니다.')"
+                    ></i>
+                    <i
+                      class="fa-brands fa-instagram"
+                      onClick="alert('준비중입니다.')"
+                    ></i>
+                    <i
+                      class="fa-brands fa-twitter"
+                      onClick="alert('준비중입니다.')"
+                    ></i>
+                  </div>
+                  <h5 class="card-title">최나은 트레이너</h5>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <!-------------------------- 헬스장 위치 지도 -------------------------->
+      <div class="mainMap">
+        <div class="healthMap">
+          <p>오시는 길</p>
+        </div>
+        <div id="map" style="width: 60%; height: 500px"></div>
+        <div class="healthMapText">
+          <div class="healthAdress">
+            <h3>주소</h3>
+            <p>서울특별시 관악구 남부순환로 210길 222 에그옐로구 4층</p>
+            <hr />
+          </div>
 
-        <!-------------------------- 푸터 -------------------------->
-        <footer class="pooterBase">
-            <!-- <section class="pooterBase2">
+          <div class="healthTraffic">
+            <h3 class="publicTraffic">대중교통</h3>
+            <div class="healthPublic">
+              <div class="healthBuring">
+                <i class="fa-solid fa-bus"></i>
+                <p class="healthP">버스</p>
+                <p>
+                  <b>서울대입구역 정류장</b><br />
+                  지선 : 5511 / 5513 / 5515 <br /><br />
+
+                  <b>서울대입구역 5번 출구</b> <br />
+                  지선 : 5413 / 5530 / 6515 <br />
+                  간선 : 9 / 461 / 506 / 651 / 643
+                </p>
+              </div>
+              <div class="healthBuring">
+                <i class="fa-solid fa-train-subway"></i>
+                <p class="healthP">지하철</p>
+                <p>
+                  <b>서울대입구역 4번 출구</b>에서 15m<br />
+                  옐로우 or 라붐아울렛 13층 <br />
+                  자마이카 휘트니스 서울대 입구점
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-------------------------- 푸터 -------------------------->
+      <footer class="pooterBase">
+        <!-- <section class="pooterBase2">
                 <p>Get in Touch</p><br>
                 <div class="pooterDiv">
                     <i class="fa-sharp fa-solid fa-location-dot"></i>
@@ -295,24 +392,20 @@
                     <p>jamaicaseoul@naver.com</p>
                 </div>
             </section> -->
-        </footer>
-
-
+      </footer>
     </div>
-
-
-
 
     <!-------------------------- 자바스크립트 -------------------------->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="./javascript.js"></script>
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a07c396519b5200cb4664b464e4f7dd0">
-    </script>
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a07c396519b5200cb4664b464e4f7dd0"
+    ></script>
     <script src="./seoulBicycle.js"></script>
 
     <!-- 부트스트랩 주소 CDN(Content Delivery Network) -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js">
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 
     <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
@@ -323,7 +416,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="./calendar.js"></script>
-
-</body>
-
+  </body>
 </html>

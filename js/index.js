@@ -63,3 +63,21 @@ $(function () {
             modal.style.display = "none";
         }
     };
+
+
+
+    // ==== pdf  =============================
+    document.getElementById('downloadButton').addEventListener('click', function() {
+        var pdfUrl = './docs/AirQuant_PPT.pdf'; // 다운로드할 PDF 파일의 경로
+        var fileName = pdfUrl.split('/').pop(); // 파일 이름 추출
+    
+        // 다운로드 링크 생성
+        var a = document.createElement('a');
+        a.href = pdfUrl;
+        a.download = fileName;
+        a.style.display = 'none'; // 화면에 표시되지 않도록 설정
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    });
+    

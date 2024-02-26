@@ -393,6 +393,14 @@
   animation: moveLeftRight 2s ease-in-out 0s infinite alternate;
 }
 
+.DWslide > .right > .btn {
+  display: flex;
+}
+
+.DWbtndiv:first-child {
+  margin-right: 30px;
+}
+
 /* ==================== devPrac ==================== */
 .DPtitle {
   margin-bottom: 10px;
@@ -505,9 +513,13 @@
 
 /* ==================== 미디어쿼리 ==================== */
 /* 데스크탑 */
+@media only screen and (min-width: 1500px) {
+  #web_wrap {
+    width: 1500px;
+  }
+}
 @media only screen and (min-width: 1200px) {
   .introSub,
-  #web_wrap,
   .DPwrap,
   .DWwrap,
   .CTwrap {
@@ -519,6 +531,10 @@
   .intro .introTitle {
     font-weight: 700;
     font-size: 10rem;
+  }
+
+  .container {
+    height: 250px;
   }
 
   /* 프로필 */
@@ -539,7 +555,7 @@
 
   .DWslide .right {
     width: 30%;
-    height: 360px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -597,9 +613,15 @@
   }
   .DWslide .right {
     width: 30%;
+    height: 350px;
   }
   .workListItem {
     gap: 0.4rem;
+  }
+
+  /* designwork */
+  .contents .image a {
+    width: calc(35% - 120px / 4);
   }
 }
 
@@ -659,5 +681,10 @@
   }
   .workListItem {
     gap: 0.3rem;
+  }
+
+  /* designwork */
+  .contents .image a {
+    width: calc(50% - 120px / 4);
   }
 }
