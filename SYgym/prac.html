@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="search">Search</button>
+    <div id="toggleSection" style="display: none">
+      <!-- 여기에 섹션의 내용을 넣으세요 -->
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </div>
+
+    <script>
+      document.getElementById("search").addEventListener("click", function () {
+        var section = document.getElementById("toggleSection");
+        if (section.style.display === "none") {
+          section.style.display = "block";
+        } else {
+          section.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>

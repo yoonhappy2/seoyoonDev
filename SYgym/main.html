@@ -140,7 +140,7 @@
 
         <!-------------------------- 토글영역 -------------------------->
         <!-------------------------- 달력 -------------------------->
-        <div class="togleSection">
+        <div class="togleSection d-none">
           <div class="calendar">
             <div class="header">
               <button class="calendar_btn" onclick="prevCal();">&lt;</button>
@@ -416,5 +416,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="./calendar.js"></script>
+    <script>
+      document.getElementById("search").addEventListener("click", function () {
+        var section = document.getElementById("toggleSection");
+        if (section.classList.contains("d-none")) {
+          section.classList.remove("d-none");
+        } else {
+          section.classList.add("d-none");
+        }
+      });
+    </script>
   </body>
 </html>
